@@ -19,7 +19,7 @@
 
 package dataStructures;
 
-public class ListNode <E extends Comparable<E>>
+public final class ListNode <E extends Comparable<E>>
 {
 
     private E data;

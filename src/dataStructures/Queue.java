@@ -23,7 +23,7 @@ package dataStructures;
 
 public class Queue<E extends Comparable<E>>
 {
-    private LinkedList<E> list;
+    private final LinkedList<E> list;
 
     //Method Name     :LinkedList
     //Parameters      :none
@@ -33,7 +33,7 @@ public class Queue<E extends Comparable<E>>
 
     public Queue()
     {
-        list = new LinkedList<E>();
+        list = new LinkedList<>();
     }
 
     //Method Name     :Queue
@@ -44,7 +44,7 @@ public class Queue<E extends Comparable<E>>
 
     public Queue(String name)
     {
-        list = new LinkedList<E>(name);
+        list = new LinkedList<>(name);
 
     }
     
@@ -101,6 +101,7 @@ public class Queue<E extends Comparable<E>>
     //Partners        :None
     //Description     :this method gets the employeeNumber
     
+    @Override
     public String toString()
     {
         return list.toString();

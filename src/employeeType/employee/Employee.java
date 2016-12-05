@@ -20,13 +20,12 @@
 
 package employeeType.employee;
 import exceptions.InvalidEmployeeNumberException;
-import java.util.Scanner;
 import java.io.Serializable;
 
 public abstract class Employee implements Comparable<Employee>, Serializable{
     private String firstName, lastName;
     private char middleInitial, gender;
-    private boolean Fulltime;
+    private final boolean Fulltime;
     private int employeeNum;
 
     //Method Name     :Employee Constructor

@@ -67,6 +67,7 @@ public class CommissionEmployee extends Employee {
     //Partners        :None
     //Description     :calculates the weekly pay returning it in sales
 
+    @Override
     public double calculateWeeklyPay(){
         return sales * (rate/100);
     }
@@ -77,6 +78,7 @@ public class CommissionEmployee extends Employee {
     //Partners        :None
     //Description     :adds the annual raise to commission rate and restores the new commission rate
 
+    @Override
     public void annualRaise(){
         rate = rate + .20; 
 
@@ -88,6 +90,7 @@ public class CommissionEmployee extends Employee {
     //Partners         :none
     //Description      : ensures holiday bonus is 0.0
 
+    @Override
     public double holidayBonus(){
         return 0.00; 
     }
@@ -98,6 +101,7 @@ public class CommissionEmployee extends Employee {
     //Partners        :none
     //Description     :resets the weekly sales to 0
 
+    @Override
     public void resetWeek(){
         sales = 0.00;
     }

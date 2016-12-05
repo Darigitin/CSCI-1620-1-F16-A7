@@ -70,6 +70,7 @@ public class HourlyEmployee extends Employee{
     //Description     :Calculates the amount earned in the week using wage and hours worked. 
     //                 Also accounts for overtime hours paying Double the normal wage.
 
+    @Override
     public double calculateWeeklyPay(){
         if(hoursWorked <= 40)
             return wage * hoursWorked;
@@ -84,6 +85,7 @@ public class HourlyEmployee extends Employee{
     //Description     : calculates the wage after the annual raise. It does truncate any thousands and beyond numbers
     //                : example if it is 16.107 it will make it 16.10 instead of rounding to 16.11.
 
+    @Override
     public void annualRaise(){
 
         wage = (Math.floor((wage + (wage * .05))*100))/100; 
@@ -96,6 +98,7 @@ public class HourlyEmployee extends Employee{
     //Partners        :None
     //Description     :calculates the holiday bonus
 
+    @Override
     public double holidayBonus(){
         return wage * 40;
     }
@@ -106,6 +109,7 @@ public class HourlyEmployee extends Employee{
     //Partners        :None
     //Description     :resets the weekly hours work to 0.0
 
+    @Override
     public void resetWeek(){
         hoursWorked = 0;
     }

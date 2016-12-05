@@ -54,6 +54,7 @@ public class SalaryEmployee extends Employee {
     //Partners        :None
     //Description     :takes the salary and divides by 52 weeks to give weekly pay.
    
+    @Override
     public double calculateWeeklyPay(){
         return salary/52;
     }
@@ -64,6 +65,7 @@ public class SalaryEmployee extends Employee {
     //Partners        :None
     //Description     :Takes and calculates the annual raise plus the salary
 
+    @Override
     public void annualRaise(){
         
         salary = salary + (salary * .06); 
@@ -77,6 +79,7 @@ public class SalaryEmployee extends Employee {
     //Partners        :NOne
     //Description     :figures the value of the holiday bonus
 
+    @Override
     public double holidayBonus(){
         return salary * .03;
     }
@@ -87,6 +90,7 @@ public class SalaryEmployee extends Employee {
     //Partners        :None
     //Description     :Does nothing at this time
     
+    @Override
     public void resetWeek(){
         
     }

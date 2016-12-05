@@ -67,7 +67,7 @@ public class LinkedList<E extends Comparable<E>>
     public void insertAtFront(E item)
     {
 
-        ListNode<E> newNode = new ListNode<E>(item);
+        ListNode<E> newNode = new ListNode<>(item);
 
         if(numElements == 0)
         {
@@ -92,7 +92,7 @@ public class LinkedList<E extends Comparable<E>>
     public void insertAtBack(E item)
     {
 
-        ListNode<E> newNode = new ListNode<E>(item);
+        ListNode<E> newNode = new ListNode<>(item);
 
         if(numElements == 0)
         {
@@ -339,6 +339,7 @@ public class LinkedList<E extends Comparable<E>>
     //Partners        :None
     //Description     :Returns a String containing all elements in the LinkedList separated by two new lines.
 
+    @Override
     public String toString()
     {
         ListNode<E> curr = firstNode;
@@ -376,7 +377,7 @@ public class LinkedList<E extends Comparable<E>>
                     small = curr2;
                 }
             }
-            ListNode<E> temp = new ListNode<E>(curr1.getData());
+            ListNode<E> temp = new ListNode<>(curr1.getData());
             curr1.setData(small.getData());
             small.setData(temp.getData());
 
